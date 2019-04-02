@@ -35,14 +35,14 @@ class LinearRegression{
     return m / this.y_dataset.length;
   }
   getCovarianza(){
-    return (getSommaProdotto() / this.x_dataset.length) - (getXMedia() * getYMedia());
+    return (this.getSommaProdotto() / this.x_dataset.length) - (this.getXMedia() * this.getYMedia());
   }
   getVarianza(){
-    return (getSommaQuadratiX() / this.x_dataset.length) - (getXMedia() * getXMedia());
+    return (this.getSommaQuadratiX() / this.x_dataset.length) - (this.getXMedia() * this.getXMedia());
   }
   predict(x_predict){
-    var B = getCovarianza() / getVarianza();
-    var A = getYMedia() - (B * getXMedia());
+    var B = this.getCovarianza() / this.getVarianza();
+    var A = this.getYMedia() - (B * this.getXMedia());
     return (A + (B * x_predict));
   }
 }

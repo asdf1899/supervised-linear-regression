@@ -1,0 +1,16 @@
+<!doctype html>
+  <head>
+    <title>Linear Regression</title>
+    <script src="LinearRegression.js"></script>
+  </head>
+  <body>
+    <script>
+      var x = [1, 2 ,3];
+      var y = [11, 12, 33];
+      var predictionValue = 6;
+      var test = new LinearRegression(x, y);
+      var stima = test.predict(predictionValue);
+      console.log("Prediction: " + stima);
+    </script>
+  </body>
+</html>
