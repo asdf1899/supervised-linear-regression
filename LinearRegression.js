@@ -13,6 +13,13 @@ class LinearRegression{
     }
     return somma;
   }
+  getSommaQuadratiX(){
+    var somma=0;
+    for (var i=0; i < this.x_dataset.length;i++){
+      somma += this.x_dataset[i] * this.x_dataset[i];
+    }
+    return somma;
+  }
   getXMedia(){
     var m=0;
     for (var i=0; i<this.x_dataset.length;i++){
@@ -28,12 +35,14 @@ class LinearRegression{
     return m / this.y_dataset.length;
   }
   getCovarianza(){
-    return this.x_dataset;
+    return (getSommaProdotto() / this.x_dataset.length) - (getXMedia() * getYMedia());
   }
   getVarianza(){
-    return;
+    return (getSommaQuadratiX() / this.x_dataset.length) - (getXMedia() * getXMedia());
   }
   predict(x_predict){
-
+    var B = getCovarianza() / getVarianza();
+    var A = getYMedia() - (B * getXMedia());
+    return (A + (B * x_predict));
   }
 }
