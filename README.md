@@ -2,7 +2,7 @@
 
 - [Ordinary Least Squares regression (metodo dei minimi quadrati)](#ols)
 - [Example](#example)
-- [How to use LinearRegression.js](#linearregression.js)
+- [How to use LinearRegression.js](#linearregressionjs)
 
 Simple Linear Regression is finding the best relationship between the input variable x (independent variable) and the expected variable y (dependent variable). 
 The linear relationship between these two variables can be represented by a straight line called regression line.
@@ -11,11 +11,11 @@ The linear relationship between these two variables can be represented by a stra
 
 The variable y is linearly dependent on the variable x. So, we can find a straight line which can best define the data.
 
-This model could be applied to these following situations:
-* Body mass vs muscle strength
-* Money spent on advertising vs total sales
-* Years of experience vs salary
-* Physical exercise (in mins) vs cholesterol level
+This model could be applied to these following situations, for example estimating:
+* Total sales based on money spent on advertising
+* Salary based on years of experience
+* Muscle strength by body mass 
+* Cholesterol level by physical exercise (in mins)
 
 ecc...
 
