@@ -8,12 +8,24 @@ The linear relationship between these two variables can be represented by a stra
 The variable y is linearly dependent on the variable x. So, we can find a straight line which can best define the data.
 
 This model could be applied to these following situations:
-* Body mass vs Muscle strength
-* Money spent on advertising vs Total sales
-* Years of experience vs Salary
-* Physical exercise (in mins) vs Cholesterol level
+* Body mass vs muscle strength
+* Money spent on advertising vs total sales
+* Years of experience vs salary
+* Physical exercise (in mins) vs cholesterol level
 
 ecc...
+
+## OLS
+
+To calculate the regression line you can use the Ordinary Least Squares regression (metodo dei minimi quadrati):
+
+![OLS](docs/2.jpg?raw=true)
+
+## Example
+
+![Example](docs/1.PNG?raw=true)
+
+_Y(predict value)=a(0.135)+b(0.627)*X(UserInput)_
 
 ## Authors
 
