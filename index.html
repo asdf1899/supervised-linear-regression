@@ -5,13 +5,28 @@
     <script src="js/ReadFile.js"></script>
   </head>
   <body>
+    <h3>Inital Data: </h3><span id="xData"></span>
+    <h3>Expected Values: </h3><span id="yData"></span>
+    <h3>Value: </h3>
+    <input id="value" type="number"></input>
+    <input id="submit" type="button" value="OK" onclick="predict()"></input>
+    <h3>Predicted value: </h3><span id="predict"></span>
     <script>
-      var x = [1, 2 ,3];
-      var y = [11, 12, 33];
-      var predictionValue = 6;
-      var test = new LinearRegression(x, y);
-      var stima = test.predict(predictionValue);
-      console.log("Prediction: " + stima);
+      function predict(){
+        var predictionValue = document.getElementById('value').value;
+        if (predictionValue != ""){
+          var test = new LinearRegression(x, y);
+          var stima = test.predict(predictionValue);
+          console.log("Prediction: " + stima);
+         
+          document.getElementById('value').innerHTML = this.predictionValue;
+          document.getElementById('predict').innerHTML = stima;
+        }
+      }
+      this.x = [1, 2 ,3];
+      this.y = [11, 12, 33];
+      document.getElementById('xData').innerHTML = x;
+      document.getElementById('yData').innerHTML = y;
     </script>
   </body>
 </html>
